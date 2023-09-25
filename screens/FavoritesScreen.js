@@ -23,7 +23,7 @@ const FavoriteScreen = ({ navigation }) => {
                             [
                                 {
                                     text: 'Cancel',
-                                    onPress: () => console.log(campsite.name + 'Not Deleted'),
+                                    onPress: () => console.log(campsite.name + ' Not Deleted'),
                                     style: 'cancel'
                                 },
                                 {

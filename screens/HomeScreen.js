@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react';
-import { Text, View, Animated } from 'react-native';
-import { Card } from 'react-native-elements';
-import { useSelector } from 'react-redux';
-import { baseUrl } from '../shared/baseUrl';
-import Loading from '../components/LoadingComponent';
+import { useEffect, useRef } from "react";
+import { Text, View, Animated } from "react-native";
+import { Card } from "react-native-elements";
+import { useSelector } from "react-redux";
+import { baseUrl } from "../shared/baseUrl";
+import Loading from "../components/LoadingComponent";
 
 const FeaturedItem = (props) => {
     const { item } = props;
@@ -22,12 +22,12 @@ const FeaturedItem = (props) => {
         return (
             <Card containerStyle={{ padding: 0 }}>
                 <Card.Image source={{ uri: baseUrl + item.image }}>
-                    <View style={{ justifyContent: 'center', flex: 1 }}>
+                    <View style={{ justifyContent: "center", flex: 1 }}>
                         <Text
                             style={{
-                                color: 'white',
-                                textAlign: 'center',
-                                fontSize: 20
+                                color: "white",
+                                textAlign: "center",
+                                fontSize: 20,
                             }}
                         >
                             {item.name}
@@ -49,7 +49,7 @@ const HomeScreen = () => {
     const scaleAnimation = Animated.timing(scaleValue, {
         toValue: 1,
         duration: 1500,
-        useNativeDriver: true
+        useNativeDriver: true,
     });
 
     const featCampsite = campsites.campsitesArray.find((item) => item.featured);
